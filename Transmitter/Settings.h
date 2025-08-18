@@ -8,7 +8,8 @@
  * MEANING IF YOU UNCOMMENT AN OPTION YOU HAVE TO COMMENT OUT ALL THE OTHER OPTIONS!
 **/
 
-
+#define DHTPIN 6
+#define DHTTYPE DHT11
 
 /**
  * The pin that is connected to the transmission module.
@@ -110,6 +111,9 @@
 //#define TRF_EOT_IN_TX
 //#define TRF_EOT_NONE
 
-
+extern char temp[8];
+extern char humid[8];
+extern float h;
+extern float t;
 
 #endif	/* TRF_SETTINGS_H */
