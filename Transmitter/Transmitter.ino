@@ -1,10 +1,11 @@
 #include "TinyRF_TX.h"
 #include "TinyDHT.h"
 #include "Main.h"
-
+ 
 
 void setup() {
   setupTransmitter();
+  dht.begin();
 }
 
 void loop() {
