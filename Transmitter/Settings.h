@@ -116,5 +116,4 @@ extern char humid[8];
 extern float h;
 extern float t;
 
-
 #endif	/* TRF_SETTINGS_H */
