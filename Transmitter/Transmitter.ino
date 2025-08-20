@@ -10,8 +10,7 @@ void setup() {
 
 void loop() {
   DHT_GET_VALUES();
-  dtostrf(t, 3, 1, temp);
-  dtostrf(h, 3, 1, humid);
+  DHT_STRING_VALUES();
   send((byte*)temp, strlen(temp));
   send((byte*)humid, strlen(humid));
   delayMicroseconds(TX_DELAY_MICROS);
