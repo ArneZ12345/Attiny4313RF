@@ -7,5 +7,9 @@ extern DHT dht;
 void DHT_GET_VALUES();
 void DHT_STRING_VALUES();
 
+int DIPSWITCHES();
+
+void CHECK_DIPSW();
+
 #endif
   
