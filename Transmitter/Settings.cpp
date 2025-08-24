@@ -6,11 +6,11 @@
   float h;
   float t;
   int switchValue;
+  bool SWITCH_ON;
 
 void setupDIPSW(){
 pinMode(DIPPIN_1, INPUT_PULLUP);
 pinMode(DIPPIN_2, INPUT_PULLUP);
 pinMode(DIPPIN_3, INPUT_PULLUP);
 pinMode(DIPPIN_4, INPUT_PULLUP);
-pinMode(DIPPIN_5, INPUT_PULLUP);
 }

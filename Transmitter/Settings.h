@@ -13,7 +13,6 @@
 #define DIPPIN_2 9
 #define DIPPIN_3 10
 #define DIPPIN_4 11
-#define DIPPIN_5 12
 
 /**
  * The pin that is connected to the transmission module.
@@ -120,6 +119,7 @@ extern char humid[8];
 extern float h;
 extern float t;
 extern int switchValue;
+extern bool SWITCH_ON;
 
 void setupDIPSW();
 
