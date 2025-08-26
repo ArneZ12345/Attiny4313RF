@@ -5,7 +5,6 @@
 extern DHT dht;
 
 void DHT_GET_VALUES();
-void DHT_STRING_VALUES();
 void DHT_TRANSMIT_VALUES();
 
 int DIPSWITCHES();

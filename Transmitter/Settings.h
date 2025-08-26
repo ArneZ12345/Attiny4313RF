@@ -120,6 +120,8 @@ extern float h;
 extern float t;
 extern int switchValue;
 extern bool SWITCH_ON;
+extern int TRANSMIT_BUFFER[4];
+extern char message[32];
 
 void setupDIPSW();
 
