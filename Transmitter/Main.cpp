@@ -36,7 +36,9 @@ void CHECK_DIPSW() {
   }
   if (dipValue & (1 << 3)) {
   }
+}
 
-sprintf(message, "%d,%d,%d,%d", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
-                                TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3]);
+void EMBED_MESSAGE() {
+  sprintf(message, "%d,%d,%d,%d", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
+          TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3]);
 }

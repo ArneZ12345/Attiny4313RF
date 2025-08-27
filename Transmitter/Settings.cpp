@@ -8,7 +8,7 @@
   int switchValue;
   bool SWITCH_ON;
   int TRANSMIT_BUFFER[4] = {0, 0, 0, 0};
-  char message[32];
+  char message[10];
 
 void setupDIPSW(){
 pinMode(DIPPIN_1, INPUT_PULLUP);

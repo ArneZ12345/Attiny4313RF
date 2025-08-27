@@ -10,6 +10,6 @@ void DHT_TRANSMIT_VALUES();
 int DIPSWITCHES();
 
 void CHECK_DIPSW();
-
+void EMBED_MESSAGE();
 #endif
   
