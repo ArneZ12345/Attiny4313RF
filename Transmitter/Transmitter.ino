@@ -13,5 +13,4 @@ void setup() {
 void loop() {
   DHT_GET_VALUES();
   CHECK_DIPSW();
-  EMBED_MESSAGE();
 }
