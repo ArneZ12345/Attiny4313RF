@@ -4,6 +4,10 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 
+void READ_VOLTAGE_1(){
+value = digitalRead(READ_VOLTAGE_PIN_1);
+}
+
 void DHT_GET_VALUES() {
   h = dht.readHumidity();
   t = dht.readTemperature();
@@ -35,6 +39,7 @@ void CHECK_DIPSW() {
     TRANSMIT_BUFFER[1] = (int)h;
   }
   if (dipValue & (1 << 3)) {
+    TRANSMIT_BUFFER[2] = value;
   }
 
 sprintf(message, "%d,%d,%d,%d", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
