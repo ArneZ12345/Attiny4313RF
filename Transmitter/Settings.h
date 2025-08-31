@@ -15,6 +15,7 @@
 #define DIPPIN_4 11
 
 #define READ_VOLTAGE_PIN_1 4
+#define READ_VOLTAGE_PIN_2 7
 
 /**
  * The pin that is connected to the transmission module.
@@ -116,16 +117,14 @@
 //#define TRF_EOT_IN_TX
 //#define TRF_EOT_NONE
 
-extern char temp[8];
-extern char humid[8];
-extern float h;
-extern float t;
+extern int h;
+extern int t;
 extern int switchValue;
-extern bool SWITCH_ON;
 extern int TRANSMIT_BUFFER[4];
 extern char message[32];
 
-extern int value;
+extern int voltagepin1;
+extern int voltagepin2;
 
 void setupDIPSW();
 void setupVOLTAGEPIN();

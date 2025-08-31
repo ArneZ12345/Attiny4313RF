@@ -5,7 +5,8 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 void READ_VOLTAGE_1(){
-value = digitalRead(READ_VOLTAGE_PIN_1);
+voltagepin1 = digitalRead(READ_VOLTAGE_PIN_1);
+voltagepin2 = digitalRead(READ_VOLTAGE_PIN_2);
 }
 
 void DHT_GET_VALUES() {
@@ -30,18 +31,20 @@ void CHECK_DIPSW() {
   }
 
   if (dipValue & (1 << 0)) {
-    DHT_TRANSMIT_VALUES();
+    TRANSMIT_BUFFER[0] = t;
   }
   if (dipValue & (1 << 1)) {
-    TRANSMIT_BUFFER[0] = (int)t;
+    if(h != 255){
+    TRANSMIT_BUFFER[1] = h;
+  }
   }
   if (dipValue & (1 << 2)) {
-    TRANSMIT_BUFFER[1] = (int)h;
+    TRANSMIT_BUFFER[2] = voltagepin1;
   }
   if (dipValue & (1 << 3)) {
-    TRANSMIT_BUFFER[2] = value;
+    TRANSMIT_BUFFER[3] = voltagepin2;
   }
 
-sprintf(message, "%d,%d,%d,%d", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
+sprintf(message, "%d,%d,%d,%d\r\n", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
                                 TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3]);
 }

@@ -1,15 +1,13 @@
 #include <Arduino.h>
 #include "Settings.h"
 
-  char temp[8];
-  char humid[8];
-  float h;
-  float t;
+  int h;
+  int t;
   int switchValue;
-  bool SWITCH_ON;
   int TRANSMIT_BUFFER[4] = {0, 0, 0, 0};
   char message[32];
-  int value;
+  int voltagepin1;
+  int voltagepin2;
 
 void setupDIPSW(){
 pinMode(DIPPIN_1, INPUT_PULLUP);
@@ -19,5 +17,6 @@ pinMode(DIPPIN_4, INPUT_PULLUP);
 }
 
 void setupVOLTAGEPIN(){
-  pinMode(READ_VOLTAGE_PIN_1, INPUT);
+  pinMode(READ_VOLTAGE_PIN_1, INPUT_PULLUP);
+  pinMode(READ_VOLTAGE_PIN_2, INPUT_PULLUP);
 }
