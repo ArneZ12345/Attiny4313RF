@@ -7,7 +7,7 @@
 **/
 
 #define DHTPIN 6
-#define DHTTYPE DHT11
+#define DHTTYPE DHT22
 
 #define DIPPIN_1 8
 #define DIPPIN_2 9

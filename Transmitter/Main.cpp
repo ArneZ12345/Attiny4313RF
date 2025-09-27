@@ -23,7 +23,7 @@ int DIPSWITCHES() {
   return switchValue;
 }
 
-void CHECK_DIPSW() {
+void CHECK_DIPSW() {  
   int dipValue = DIPSWITCHES();
 
   for (int i = 0; i < 4; i++) {
