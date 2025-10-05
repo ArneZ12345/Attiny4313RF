@@ -20,7 +20,7 @@
 /**
  * The pin that is connected to the transmission module.
 **/
-#define TRF_TX_PIN 5
+#define TRF_TX_PIN 13
 
 
 /**
