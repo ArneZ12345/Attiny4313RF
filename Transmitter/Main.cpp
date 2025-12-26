@@ -23,28 +23,14 @@ int DIPSWITCHES() {
   return switchValue;
 }
 
-void CHECK_DIPSW() {  
+void TRANSMIT_VALUES() {  
   int dipValue = DIPSWITCHES();
-
-  for (int i = 0; i < 4; i++) {
-    TRANSMIT_BUFFER[i] = 0;
-  }
-
-  if (dipValue & (1 << 0)) {
     TRANSMIT_BUFFER[0] = t;
-  }
-  if (dipValue & (1 << 1)) {
-    if(h != 255){
     TRANSMIT_BUFFER[1] = h;
-  }
-  }
-  if (dipValue & (1 << 2)) {
-    TRANSMIT_BUFFER[2] = voltagepin1;
-  }
-  if (dipValue & (1 << 3)) {
-    TRANSMIT_BUFFER[3] = voltagepin2;
-  }
+    TRANSMIT_BUFFER[2] = dipValue;
+    TRANSMIT_BUFFER[3] = voltagepin1;
+    TRANSMIT_BUFFER[4] = voltagepin2;
 
-sprintf(message, "%d,%d,%d,%d\r\n", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
-                                TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3]);
+sprintf(message, "%d,%d,%d,%d,%d\r\n", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
+                                TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3], TRANSMIT_BUFFER[4]);
 }

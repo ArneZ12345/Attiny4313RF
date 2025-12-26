@@ -4,7 +4,7 @@
   int h;
   int t;
   int switchValue;
-  int TRANSMIT_BUFFER[4] = {0, 0, 0, 0};
+  int TRANSMIT_BUFFER[5] = {0, 0, 0, 0, 0};
   char message[32];
   int voltagepin1;
   int voltagepin2;

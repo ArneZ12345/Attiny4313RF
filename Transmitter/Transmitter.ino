@@ -15,5 +15,5 @@ void loop() {
   DHT_TRANSMIT_VALUES();
   READ_VOLTAGE_1();
   DHT_GET_VALUES();
-  CHECK_DIPSW();
+  TRANSMIT_VALUES();
 }

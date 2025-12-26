@@ -10,7 +10,7 @@ void DHT_TRANSMIT_VALUES();
 
 int DIPSWITCHES();
 
-void CHECK_DIPSW();
+void TRANSMIT_VALUES();
 
 #endif
   
