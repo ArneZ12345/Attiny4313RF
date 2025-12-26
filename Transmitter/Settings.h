@@ -120,8 +120,8 @@
 extern int h;
 extern int t;
 extern int switchValue;
-extern int TRANSMIT_BUFFER[5];
 extern char message[32];
+extern char hexString[10];
 extern int voltagepin1;
 extern int voltagepin2;
 

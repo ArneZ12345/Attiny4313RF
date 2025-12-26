@@ -1,11 +1,12 @@
 #include <Arduino.h>
 #include "Settings.h"
 
+
   int h;
   int t;
   int switchValue;
-  int TRANSMIT_BUFFER[5] = {0, 0, 0, 0, 0};
   char message[32];
+  char hexString[10];
   int voltagepin1;
   int voltagepin2;
 

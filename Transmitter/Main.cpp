@@ -25,12 +25,9 @@ int DIPSWITCHES() {
 
 void TRANSMIT_VALUES() {  
   int dipValue = DIPSWITCHES();
-    TRANSMIT_BUFFER[0] = t;
-    TRANSMIT_BUFFER[1] = h;
-    TRANSMIT_BUFFER[2] = dipValue;
-    TRANSMIT_BUFFER[3] = voltagepin1;
-    TRANSMIT_BUFFER[4] = voltagepin2;
 
-sprintf(message, "%d,%d,%d,%d,%d\r\n", TRANSMIT_BUFFER[0], TRANSMIT_BUFFER[1],
-                                TRANSMIT_BUFFER[2], TRANSMIT_BUFFER[3], TRANSMIT_BUFFER[4]);
+sprintf(hexString, "%X", dipValue);
+
+sprintf(message, "%d,%d,%s,%d,%d\r\n", 
+            t, h, hexString, voltagepin1, voltagepin2);
 }
